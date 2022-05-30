@@ -63,7 +63,7 @@
     ;";
 
     $insertEstudio="INSERT INTO estudio VALUES 
-        (123456789, 'FROM SOFTWARE, Inc.', 'Hidetaka Miyazaki', 'Naotoshi Zin', 'Japón', 'Tokio'),
+        (123456789, 'From Software, Inc.', 'Hidetaka Miyazaki', 'Naotoshi Zin', 'Japón', 'Tokio'),
         (586548547, 'The Game Kitchen', 'Mauricio García', 'Mauricio García', 'España', 'Sevilla'),
         (987654321, 'Game Freak', 'Satoshi Taijiri', 'Satoshi Taijiri', 'Japón', 'Setagaya')
         
