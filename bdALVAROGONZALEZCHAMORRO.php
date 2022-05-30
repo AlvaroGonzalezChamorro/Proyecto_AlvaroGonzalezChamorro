@@ -17,6 +17,7 @@
         dni VARCHAR(9) PRIMARY KEY NOT NULL,
         usuario VARCHAR(50),
         contrasena VARCHAR(50),
+        email VARCHAR(100),
         sexo CHAR(1),
         fec_nac DATE,
         boletin BOOLEAN
@@ -57,9 +58,9 @@
     mysqli_query($link,$crearVideojuego);
 
     $insertUsuario="INSERT INTO usuario VALUES 
-        ('45654585F', 'alvaro', 'alvaropass', 'H', '1996-07-22', false),
-        ('85236985T', 'eva', 'evapass', 'M', '1990-05-23', true),
-        ('12345678D', 'pepe', 'pepepass', 'H', '1984-01-06', true)
+        ('45654585F', 'alvaro', 'alvaropass', 'alvaro@gmail.com', 'H', '1996-07-22', false),
+        ('85236985T', 'eva', 'evapass', 'eva@hotmail.com', 'M', '1990-05-23', true),
+        ('12345678D', 'pepe', 'pepepass', 'pepe@yahoo.es', 'H', '1984-01-06', true)
     ;";
 
     $insertEstudio="INSERT INTO estudio VALUES 
