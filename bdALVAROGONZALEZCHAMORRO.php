@@ -47,8 +47,8 @@
         precio DECIMAL(10,2),
         estudio INT(9),
         distribuidora INT(9),
-        FOREIGN KEY (estudio) REFERENCES id_estudio(estudio),
-        FOREIGN KEY (distribuidora) REFERENCES id_distribuidora(distribuidora)
+        FOREIGN KEY (estudio) REFERENCES estudio(id_estudio),
+        FOREIGN KEY (distribuidora) REFERENCES distribuidora(id_distribuidora)
     );";
 
     mysqli_query($link,$crearUsuario);
@@ -75,7 +75,7 @@
         (852963714, 'Electronic Arts Inc.', 'Andrew Wilson', 'Trip Hawkins', 'Redwood City', 'Estados Unidos')
     ;";
 
-    $insertVideojuego="INSERT INTO videojuegos VALUES 
+    $insertVideojuego="INSERT INTO videojuego VALUES 
         ('846957157', 'Bloodborne', '2015-03-24', 19.99, 123456789, 789456123),
         ('957851364', 'Blasphemous', '2019-09-10', 24.99, 586548547, 951623847),
         ('12345678D', 'Pokémon Diamante', '2006-09-28', 19.99, 987654321, 852963714)
