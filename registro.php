@@ -67,8 +67,8 @@
         <input type="submit" name="registrar" value="Registrarse">
         <button><a href="index.php"> Volver </a></button>
         <input type="reset" name="reset" value="Restablecer campos">
-        
 
+    </form>
 
 <?php
 

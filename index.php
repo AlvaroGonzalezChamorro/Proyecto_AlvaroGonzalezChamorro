@@ -41,6 +41,31 @@
         <p>
             <a href="registro.php"> ¿Aún no se ha registrado? Pulse aquí </a>
         </p>
+
+    </form>
+
+<?php
+
+    if(isset($_POST['login'])){
+
+        $usuario = $_POST['usuario'];
+
+        $contrasena = $_POST['contrasena'];
+
+        $compUsuario = "SELECT * FROM usuario WHERE usuario='$usuario' AND contrasena='$contrasena';";
+
+        $resulcompUsuario = mysqli_query($link, $compUsuario);
+
+        if(mysqli_num_rows($resulcompUsuario) > 0){
+            header("location: principal.php");
+        }
+        else {
+            echo "Usuario <b>" . $usuario . "</b> y contrasena <b>" . $contrasena . "</b> no coinciden";
+        }
+
+    }
+
+?>
         
     
 </body>
