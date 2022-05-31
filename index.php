@@ -32,14 +32,14 @@
 
         <p>
             Contraseña <br>
-            <input type="text" name="usuario">
+            <input type="text" name="contrasena">
         </p>
 
         <input type="submit" name="login" value="Acceder">
         <input type="reset" name="reset" value="Restablecer campos">
 
         <p>
-            <a href="registro.php"> ¿Aún no te has registrado? Pulsa aquí </a>
+            <a href="registro.php"> ¿Aún no se ha registrado? Pulse aquí </a>
         </p>
         
     
