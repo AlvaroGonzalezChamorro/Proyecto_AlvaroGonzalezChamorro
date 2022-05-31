@@ -60,7 +60,7 @@
 
         <p>
             <input type="hidden" name="boletin" value="false">
-            <input type="checkbox" name="boletin" value="true">
+            <input type="checkbox" name="boletin" value="true" checked>
             ¿Desea suscribirse al boletín de noticias de WikiGame?
         </p>
 

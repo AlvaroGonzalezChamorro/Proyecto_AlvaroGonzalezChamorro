@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -47,6 +48,8 @@
 <?php
 
     if(isset($_POST['login'])){
+        
+        $_SESSION['usuario'] = $_POST['usuario'];
 
         $usuario = $_POST['usuario'];
 
