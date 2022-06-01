@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
     <title>Inicio</title>
 </head>
 <body>
@@ -21,30 +22,36 @@
     mysqli_select_db($link,$nombreBD);
 
 ?>
-
-    <h1> Bienvenido a WikiGame </h1>
+<div class="contenedor">
+    <header>
+        <h1> Bienvenido a WikiGame </h1>
+    </header>
 
     <form action="" method="POST">
 
-        <p>
-            Usuario <br>
-            <input type="text" name="usuario">
-        </p>
+    <main>
+        <article class="login">
+            <p>
+                <h4>Usuario</h4> <br>
+                <input type="text" name="usuario">
+            </p>
 
-        <p>
-            Contraseña <br>
-            <input type="text" name="contrasena">
-        </p>
+            <p>
+                <h4>Contraseña</h4> <br>
+                <input type="text" name="contrasena">
+            </p>
 
-        <input type="submit" name="login" value="Acceder">
-        <input type="reset" name="reset" value="Restablecer campos">
+            <input type="submit" name="login" value="Acceder">
+            <input type="reset" name="reset" value="Restablecer campos">
 
-        <p>
-            <a href="registro.php"> ¿Aún no se ha registrado? Pulse aquí </a>
-        </p>
+            <p>
+                <a href="registro.php"> ¿Aún no se ha registrado? Pulse aquí </a>
+            </p>
+        </article>
+    </main>
 
     </form>
-
+</div>
 <?php
 
     if(isset($_POST['login'])){

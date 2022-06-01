@@ -24,7 +24,7 @@
 ?>
 <div class="contenedor">
     <header>
-        <h1> Bienvenido a Wikigame, <?php echo $_SESSION['usuario'] ?> </h1>
+        <h1> Bienvenido a WikiGame, <?php echo $_SESSION['usuario'] ?> </h1>
     </header>
 
     <form action="" method="POST">
