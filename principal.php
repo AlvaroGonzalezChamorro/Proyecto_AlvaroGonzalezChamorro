@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/principal.css">
     <title>Página principal</title>
 </head>
 <body>
@@ -21,26 +22,41 @@
     mysqli_select_db($link,$nombreBD);
 
 ?>
-
-    <h1> Bienvenido a Wikigame, <?php echo $_SESSION['usuario'] ?> </h1>
+<div class="contenedor">
+    <header>
+        <h1> Bienvenido a Wikigame, <?php echo $_SESSION['usuario'] ?> </h1>
+    </header>
 
     <form action="" method="POST">
 
-        <details>
-            <summary> Ajustes de usuario </summary>
-            <p><input type="submit" name="consultarUsuario" value="Ver datos de usuario"></p>
-            <p><input type="submit" name="modificarUsuario" value="Modificar datos de usuario"></p>
-            <p><input type="submit" name="eliminarUsuario" value="Eliminar datos de usuario"></p>
-            <p><input type="submit" name="cerrarUsuario" value="Cerrar sesión"></p>
-        </details>
+    <aside>
+        <article class="usuario">
+            <h2>Ajustes de Usuario</h2>
+            <hr>
+            <ul>
+                <li><p><input type="submit" name="consultarUsuario" value="Ver datos de usuario"></p></li>
+                <li><p><input type="submit" name="modificarUsuario" value="Modificar datos de usuario"></p></li>
+                <li><p><input type="submit" name="eliminarUsuario" value="Eliminar datos de usuario"></p></li>
+                <li><p><input type="submit" name="cerrarUsuario" value="Cerrar sesión"></p></li>
+            </ul>
+        </article>
+    </aside>
 
-        <h3>Videojuegos</h3>
-            <p><input type="submit" name="consultarTodoVideojuego" value="Ver todos los videojuegos"></p>
-            <p><input type="submit" name="ConsultarVideojuego" value="Buscar videojuego por nombre"></p>
-            <p><input type="submit" name="agregarVideojuego" value="Agregar nuevo videojuego"></p>
+    <main>
+        <article class="videojuego">
+            <h2>Videojuegos</h2>
+            <ul>
+                <li><p><input type="submit" name="consultarTodoVideojuego" value="Ver todos los videojuegos"></p></li>
+                <li><p><input type="submit" name="ConsultarVideojuego" value="Buscar videojuego por nombre"></p></li>
+                <li><p><input type="submit" name="agregarVideojuego" value="Agregar nuevo videojuego"></p></li>
+            </ul>
+        </article>
+    </main>
 
-            <p id="demo"></p>
     </form>
+</div>
+
+</body>
 
 <?php
 
