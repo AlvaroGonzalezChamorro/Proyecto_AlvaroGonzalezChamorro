@@ -74,6 +74,10 @@
         header('location: consultarVideojuego.php');
     }
 
+    if(isset($_POST['agregarVideojuego'])){
+        header('location: agregarVideojuego.php');
+    }
+
 ?>
 
 
