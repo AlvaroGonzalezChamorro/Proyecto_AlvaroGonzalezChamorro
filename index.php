@@ -63,7 +63,11 @@
             header("location: principal.php");
         }
         else {
-            echo "Usuario <b>" . $usuario . "</b> y contrasena <b>" . $contrasena . "</b> no coinciden";
+?>
+            <script>
+                    alert("No coindice el usuario y la contraseña");
+            </script>
+<?php
         }
 
     }

@@ -30,13 +30,17 @@
             <summary> Ajustes de usuario </summary>
             <p><input type="submit" name="consultarUsuario" value="Ver datos de usuario"></p>
             <p><input type="submit" name="modificarUsuario" value="Modificar datos de usuario"></p>
-            <p><input type="submit" name="eliminarUsuario" value="Eliminar datos de usuario"></p>
+            <p><input type="submit" name="eliminarUsuario" value="Eliminar datos de usuario" onclick="eliminarUsuario()"></p>
+            <p><input type="submit" name="cerrarUsuario" value="Cerrar sesión"></p>
         </details>
 
         <h3>Videojuegos</h3>
             <p><input type="submit" name="consultarTodoVideojuego" value="Ver todos los videojuegos"></p>
             <p><input type="submit" name="ConsultarVideojuego" value="Buscar videojuego por nombre"></p>
             <p><input type="submit" name="agregarVideojuego" value="Agregar nuevo videojuego"></p>
+
+            <p id="demo"></p>
+    </form>
 
 <?php
 
@@ -66,4 +70,14 @@
 
     }
 
+    if(isset($_POST['modificarUsuario'])){
+        header('location: modificarUsuario.php');
+    }
+
+    if(isset($_POST['eliminarUsuario'])){
+        header('location: eliminarUsuario.php');
+    }
+
 ?>
+
+

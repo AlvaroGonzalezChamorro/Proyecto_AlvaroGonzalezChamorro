@@ -65,7 +65,7 @@
         </p>
 
         <input type="submit" name="registrar" value="Registrarse">
-        <button><a href="index.php"> Volver </a></button>
+        <input type="submit" name="volver" value="Volver">
         <input type="reset" name="reset" value="Restablecer campos">
 
     </form>
@@ -85,7 +85,13 @@
         $resulUsuario = mysqli_query($link, $consulUsuario);
 
         if(mysqli_num_rows($resulUsuario) > 0){
-            echo "El nombre de usuario <b>" . $usuario . "</b> ya ha sido registrado";
+?>
+
+            <script>
+                    alert("Ese nombre de usuario ya existe");
+            </script>
+
+<?php
         }
         else {
 
@@ -95,16 +101,18 @@
 
             mysqli_query($link, $insertUsuario);
 
-            echo "Usuario <b>" . $usuario . "</b> registrado correctamente";
-        }
-        
-        
+?>
+            <script>
+                    alert("Usuario registrado correctamente");
+            </script>
+<?php
 
+        }     
     }
 
-
-
-
+    if(isset($_POST['volver'])){
+        header('location: index.php');
+    }
 ?>
         
     
