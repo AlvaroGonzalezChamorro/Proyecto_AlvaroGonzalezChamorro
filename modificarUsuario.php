@@ -123,11 +123,9 @@
 
         mysqli_query($link, $modificarUsuario);
 
-?>
-<script>
-        alert("Se ha modificado al usuario correctamente");
-</script>
-<?php
+        echo '<script> alert("Usuario modificado correctamente, será redirigid@ a la página principal");
+        window.location.href="principal.php";
+        </script>';
     }
 
     if(isset($_POST['volver'])){

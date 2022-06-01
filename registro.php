@@ -101,11 +101,9 @@
 
             mysqli_query($link, $insertUsuario);
 
-?>
-            <script>
-                    alert("Usuario registrado correctamente");
-            </script>
-<?php
+            echo '<script> alert("Usuario registrado correctamente, será redirigid@ al inicio");
+                window.location.href="index.php";
+                </script>';
 
         }     
     }

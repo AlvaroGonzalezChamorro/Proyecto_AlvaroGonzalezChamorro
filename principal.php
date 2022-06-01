@@ -30,7 +30,7 @@
             <summary> Ajustes de usuario </summary>
             <p><input type="submit" name="consultarUsuario" value="Ver datos de usuario"></p>
             <p><input type="submit" name="modificarUsuario" value="Modificar datos de usuario"></p>
-            <p><input type="submit" name="eliminarUsuario" value="Eliminar datos de usuario" onclick="eliminarUsuario()"></p>
+            <p><input type="submit" name="eliminarUsuario" value="Eliminar datos de usuario"></p>
             <p><input type="submit" name="cerrarUsuario" value="Cerrar sesión"></p>
         </details>
 
@@ -45,28 +45,7 @@
 <?php
 
     if(isset($_POST['consultarUsuario'])){
-
-        $usuario = $_SESSION['usuario'];
-
-        $consulUsuario = "SELECT * FROM usuario WHERE usuario='$usuario';";
-        $resulUsuario = mysqli_query($link, $consulUsuario);
-
-        if(mysqli_num_rows($resulUsuario) > 0){
-            while($fila=mysqli_fetch_array($resulUsuario)){
-                echo "DNI: " . $fila[0] . "<br>";
-                echo "Usuario: " . $fila[1] . "<br>";
-                echo "Contraseña: " . $fila[2] . "<br>";
-                echo "Email: " . $fila[3] . "<br>";
-                echo "Sexo: " . $fila[4] . "<br>";
-                echo "Fecha de nacimiento: " . $fila[5] . "<br>";
-                if($fila[6]){
-                    echo "Está suscrito al boletín de noticias";
-                }
-                else {
-                    echo "No está suscrito al boletín de noticias";
-                }
-            }
-        }
+        header('location: consultarUsuario.php');
 
     }
 
@@ -76,6 +55,23 @@
 
     if(isset($_POST['eliminarUsuario'])){
         header('location: eliminarUsuario.php');
+    }
+
+    if(isset($_POST['cerrarUsuario'])){
+
+        session_destroy();
+
+        echo '<script> alert("Se ha cerrado la sesión , será redirigid@ al inicio");
+        window.location.href="index.php";
+        </script>';
+    }
+
+    if(isset($_POST['consultarTodoVideojuego'])){
+        header('location: consultarTodoVideojuego.php');
+    }
+
+    if(isset($_POST['ConsultarVideojuego'])){
+        header('location: consultarVideojuego.php');
     }
 
 ?>

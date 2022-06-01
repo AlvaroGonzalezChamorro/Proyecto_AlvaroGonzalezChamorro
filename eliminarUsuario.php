@@ -67,4 +67,8 @@
         }
     }
 
+    if(isset($_POST['volver'])){
+        header('location: principal.php');
+    }
+
 ?>
