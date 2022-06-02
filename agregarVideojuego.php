@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/agregarVideojuego.css">
     <title>Agregar videojuego</title>
 </head>
 <body>
@@ -20,35 +21,37 @@
     mysqli_select_db($link,$nombreBD);
 
 ?>
-
-    <h1> Agregar videojuego </h1>
+<div class="contenedor">
+    <header>
+        <h1> Agregar videojuego </h1>
+    </header>
     
-    <p><h3> Introduzca los datos para agregar un videojuego </h3></p>
+    <main>
 
     <form action="" method="POST">
 
         <p>
-            ID del vidoejuego <br>
+            <h4>ID del videojuego</h4> <br>
             <input type="text" name="id_videojuego">
         </p>
 
         <p>
-            Nombre <br>
+            <h4>Nombre</h4> <br>
             <input type="text" name="nombre">
         </p>
 
         <p>
-            Fecha de salida <br>
+            <h4>Fecha de salida</h4> <br>
             <input type="text" name="fec_salida">
         </p>
 
         <p>
-            Precio <br>
+            <h4>Precio</h4> <br>
             <input type="text" name="precio">
         </p>
 
         <p>
-        Estudio <br>
+        <h4>Estudio</h4> <br>
         <select name="estudio">
             <option value=""></option>
 <?php
@@ -66,7 +69,7 @@
         </p>
 
         <p>
-        Distribuidora <br>
+        <h4>Distribuidora</h4> <br>
         <select name="distribuidora">
             <option value=""></option>
 <?php
@@ -127,10 +130,10 @@
     }
 
     if(isset($_POST['volver'])){
-        header('location: index.php');
+        header('location: principal.php');
     }
 ?>
-        
-    
+    </main>
+</div>
 </body>
 </html>

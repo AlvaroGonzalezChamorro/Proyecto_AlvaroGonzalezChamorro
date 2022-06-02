@@ -32,12 +32,12 @@ main {
 	font-size: 15px;
 }
 
-input[type=text] {
+input[type=text], select {
     text-decoration: none;
     width: 100%;
     padding: 10px;
-    margin: 10px 0;
-    margin-bottom: 30px;
+    margin: 0px 0;
+    margin-bottom: 10px;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -54,13 +54,8 @@ input[type=submit], input[type=reset] {
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
-    margin-bottom: 40px;
 }
 
 input[type=submit]:hover, input[type=reset]:hover {
     background-color: #024655;
-}
-
-a {
-    text-decoration: none;
 }

@@ -36,12 +36,22 @@ input[type=text] {
     text-decoration: none;
     width: 100%;
     padding: 10px;
-    margin: 10px 0;
-    margin-bottom: 30px;
+    margin: 0px 0;
+    margin-bottom: 10px;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+}
+
+input[type=radio] {
+    margin-bottom: 20px;
+}
+
+.check, .checkText {
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 input[type=submit], input[type=reset] {
@@ -54,13 +64,13 @@ input[type=submit], input[type=reset] {
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
-    margin-bottom: 40px;
 }
 
 input[type=submit]:hover, input[type=reset]:hover {
     background-color: #024655;
 }
 
-a {
-    text-decoration: none;
+h3 {
+    margin-top: 20px;
+    margin-bottom: 20px;
 }

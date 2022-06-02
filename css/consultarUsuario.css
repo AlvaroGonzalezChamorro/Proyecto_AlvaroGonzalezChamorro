@@ -1,8 +1,8 @@
-* {
+/** {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-}
+}*/
 
 body {
     font-family: 'Open sans', sans-serif;
@@ -22,29 +22,18 @@ header {
 	display: flex;
 	justify-content:space-between;
 	margin-bottom: 20px;
-    padding: 20px;
+    padding-left: 20px;
 }
 
 main {
-    width: fit-content;
     background-color: white;
+    width: fit-content;
     padding: 20px;
 	font-size: 15px;
+    line-height: 25px;
 }
 
-input[type=text] {
-    text-decoration: none;
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    margin-bottom: 30px;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-input[type=submit], input[type=reset] {
+input[type=submit] {
     width: 100%;
     background-color: #03657C;
     color: white;
@@ -54,13 +43,8 @@ input[type=submit], input[type=reset] {
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
-    margin-bottom: 40px;
 }
 
-input[type=submit]:hover, input[type=reset]:hover {
+input[type=submit]:hover {
     background-color: #024655;
-}
-
-a {
-    text-decoration: none;
 }

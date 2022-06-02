@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/modificarUsuario.css">
     <title>Modificar usuario</title>
 </head>
 <body>
@@ -35,30 +36,34 @@
     $boletin = $tupla[6];
 
 ?>
+<div class="contenedor">
 
-    <h1> Modificar usuario: <?php echo $usuario ?> </h1>
+    <header>
+        <h1> Modificar usuario: <?php echo $usuario ?> </h1>
+    </header>
 
+    <main>
     <h3> Modifique los campos deseados </h3>
 
     <form action="" method="POST">
 
         <p>
-            DNI <br>
+            <h4>DNI</h4> <br>
             <input type="text" name="dni" value="<?php echo $dni ?>" disabled>
         </p>
 
         <p>
-            Usuario <br>
+            <h4>Usuario</h4> <br>
             <input type="text" name="usuario" value="<?php echo $usuario ?>">
         </p>
 
         <p>
-            Contraseña <br>
+            <h4>Contraseña</h4> <br>
             <input type="text" name="contrasena" value="<?php echo $contrasena ?>">
         </p>
 
         <p>
-            Email <br>
+            <h4>Email</h4> <br>
             <input type="text" name="email" value="<?php echo $email ?>">
         </p>
 
@@ -67,7 +72,7 @@
     if($sexo == 'H'){
 ?>
         <p>
-            Sexo <br>
+            <h4>Sexo</h4> <br>
             <input type="radio" name="sexo" value="H" checked> Hombre
             <input type="radio" name="sexo" value="M"> Mujer
         </p>
@@ -75,7 +80,7 @@
     } else {
 ?>
     <p>
-        Sexo <br>
+        <h4>Sexo</h4> <br>
         <input type="radio" name="sexo" value="H"> Hombre
         <input type="radio" name="sexo" value="M" checked> Mujer
     </p>
@@ -84,14 +89,14 @@
 ?>
 
         <p>
-            Fecha de nacimiento <br>
+            <h4>Fecha de nacimiento</h4> <br>
             <input type="text" name="fec_nac" value="<?php echo $fec_nac ?>">
         </p>
 
         <p>
             <input type="hidden" name="boletin" value="false">
-            <input type="checkbox" name="boletin" value="true" checked>
-            ¿Desea suscribirse al boletín de noticias de WikiGame?
+            <div class="check"><input type="checkbox" name="boletin" value="true" checked></div>
+            <div class="checkText"><h4>¿Desea suscribirse al boletín de noticias de WikiGame?</h4></div>
         </p>
 
         <input type="submit" name="modificar" value="Modificar usuario">
@@ -132,3 +137,7 @@
         header('location: principal.php');
     }
 ?>
+    </main>
+</div>
+</body>
+</html>

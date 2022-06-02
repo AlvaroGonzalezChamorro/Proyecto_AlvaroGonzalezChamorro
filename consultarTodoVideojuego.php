@@ -5,9 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/consultarTodoVideojuego.css">
     <title>Consultar todos los videojuegos</title>
 </head>
 <body>
+
+<div class="contenedor">
+
+    <header>
+        <h1> Todos los videojuegos </h1>
+    </header>
+    <main>
 
 <?php
 
@@ -28,12 +36,12 @@
 
     while ($tuplaVideojuegos = mysqli_fetch_array($resultTodoVideojuego)){
         echo "<p>";
-        echo "ID: " . $tuplaVideojuegos[0] . "<br>";
-        echo "Nombre: " . $tuplaVideojuegos[1] . "<br>";
-        echo "Fecha de salida: " . $tuplaVideojuegos[2] . "<br>";
-        echo "Precio: " . $tuplaVideojuegos[3] . "<br>";
-        echo "Estudio: " . $tuplaVideojuegos[6] . " (" . $tuplaVideojuegos[4] . ")" . "<br>";
-        echo "Distribuidora: " . $tuplaVideojuegos[7] . "(" . $tuplaVideojuegos[5] . ")" . "<br>";
+        echo "<b>ID:</b> " . $tuplaVideojuegos[0] . "<br>";
+        echo "<b>Nombre:</b> " . $tuplaVideojuegos[1] . "<br>";
+        echo "<b>Fecha de salida:</b> " . $tuplaVideojuegos[2] . "<br>";
+        echo "<b>Precio:</b> " . $tuplaVideojuegos[3] . "<br>";
+        echo "<b>Estudio:</b> " . $tuplaVideojuegos[6] . " (" . $tuplaVideojuegos[4] . ")" . "<br>";
+        echo "<b>Distribuidora:</b> " . $tuplaVideojuegos[7] . "(" . $tuplaVideojuegos[5] . ")" . "<br>";
         echo "</p>";
     }
 ?>
@@ -47,3 +55,6 @@
         header('location: principal.php');
     }
 ?>
+    </main>
+</div>
+</body>

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/eliminarUsuario.css">
     <title>Modificar usuario</title>
 </head>
 <body>
@@ -30,9 +31,12 @@
     $dni = $tupla[0];
 
 ?>
+<div class="contenedor">
+    <header>
+        <h1> Eliminar usuario: <?php echo $usuario ?> </h1>
+    </header>
 
-    <h1> Eliminar usuario: <?php echo $usuario ?> </h1>
-
+    <main>
     <h4> Introduzca su DNI para confirmar </h4>
 
     <form action="" method="POST">
@@ -72,3 +76,8 @@
     }
 
 ?>
+
+    </main>
+</div>
+</body>
+</html>

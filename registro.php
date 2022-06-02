@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/registro.css">
     <title>Registro</title>
 </head>
 <body>
@@ -20,49 +21,55 @@
     mysqli_select_db($link,$nombreBD);
 
 ?>
+<div class="contenedor">
 
-    <h1> Bienvenido a WikiGame </h1>
-    
+    <header>
+        <h1> Bienvenido a WikiGame </h1>
+    </header>
+
+    <main>
     <p><h3> Introduzca los datos para registrarse </h3></p>
 
     <form action="" method="POST">
 
         <p>
-            DNI <br>
+            <h4>DNI</h4> <br>
             <input type="text" name="dni">
         </p>
 
         <p>
-            Usuario <br>
+            <h4>Usuario</h4> <br>
             <input type="text" name="usuario">
         </p>
 
         <p>
-            Contraseña <br>
+            <h4>Contraseña</h4> <br>
             <input type="text" name="contrasena">
         </p>
 
         <p>
-            Email <br>
+            <h4>Email</h4> <br>
             <input type="text" name="email">
         </p>
 
         <p>
-            Sexo <br>
+            <h4>Sexo</h4> <br>
             <input type="radio" name="sexo" value="H"> Hombre
             <input type="radio" name="sexo" value="M"> Mujer
         </p>
 
         <p>
-            Fecha de nacimiento <br>
+            <h4>Fecha de nacimiento</h4> <br>
             <input type="text" name="fec_nac" placeholder="1990-06-27">
         </p>
 
-        <p>
-            <input type="hidden" name="boletin" value="false">
-            <input type="checkbox" name="boletin" value="true" checked>
-            ¿Desea suscribirse al boletín de noticias de WikiGame?
-        </p>
+        
+            <p>
+                <input type="hidden" name="boletin" value="false">
+                <div class="check"><input type="checkbox" name="boletin" value="true" checked></div>
+                <div class="checkText"><h4>¿Desea suscribirse al boletín de noticias de WikiGame?</h4></div>
+            </p>
+        
 
         <input type="submit" name="registrar" value="Registrarse">
         <input type="submit" name="volver" value="Volver">
@@ -112,7 +119,7 @@
         header('location: index.php');
     }
 ?>
-        
-    
+    </main>
+</div>
 </body>
 </html>

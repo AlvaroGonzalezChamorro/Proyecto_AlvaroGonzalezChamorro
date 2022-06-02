@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Open sans', sans-serif;
-    background-color: #9ebdc4;
+    background-image: url('https://www.wallpaperuse.com/wallp/69-691653_m.jpg');
 }
 
 .contenedor{
@@ -63,9 +63,13 @@ main article ul li input[type=submit] {
     font-size: 16px;
 }
 
+main article ul li input[type=submit]:hover {
+    background-color: #024655;
+}
+
 aside {
 	width: 30%;
-    height: 365px;
+    height: auto;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -78,6 +82,9 @@ aside article {
     color: white;
     padding: 20px;
     background-color: #03657C;
+    /*border-style: solid;
+    border-radius: 1px;
+    border-color: red;*/
 }
 
 aside article ul {

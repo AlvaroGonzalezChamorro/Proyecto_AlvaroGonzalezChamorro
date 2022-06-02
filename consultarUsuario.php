@@ -5,9 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/consultarUsuario.css">
     <title>Consultar usuario</title>
 </head>
 <body>
+
+<div class="contenedor">
+
+    <header>
+        <h1> Datos del usuario </h1>
+    </header>
+    <main>
 
 <?php
 
@@ -27,17 +35,17 @@
 
     while($tupla = mysqli_fetch_array($resulConsultar)){
 
-        echo "DNI: " . $tupla[0] . "<br>";
-        echo "Usuario: " . $tupla[1] . "<br>";
-        echo "Contraseña: " . $tupla[2] . "<br>";
-        echo "Email: " . $tupla[3] . "<br>";
-        echo "Sexo: " . $tupla[4] . "<br>";
-        echo "Fecha de nacimiento: " . $tupla[5] . "<br>";
+        echo "<b>DNI:</b> " . $tupla[0] . "<br>";
+        echo "<b>Usuario:</b> " . $tupla[1] . "<br>";
+        echo "<b>Contraseña:</b> " . $tupla[2] . "<br>";
+        echo "<b>Email:</b> " . $tupla[3] . "<br>";
+        echo "<b>Sexo:</b> " . $tupla[4] . "<br>";
+        echo "<b>Fecha de nacimiento:</b> " . $tupla[5] . "<br>";
         if($tupla[6]){
-            echo "Está suscrito al boletín de noticias";
+            echo "<b>Está suscrito al boletín de noticias.</b>";
         }
         else {
-            echo "No está suscrito al boletín de noticias";
+            echo "<b>No está suscrito al boletín de noticias.</b>";
         }
 
     }
@@ -52,3 +60,6 @@
         header('location: principal.php');
     }
 ?>
+    </main>
+</body>
+</html>
